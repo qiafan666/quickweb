@@ -1,8 +1,8 @@
-package dao
+package cornusdb
 
 import (
 	"context"
-	"github.com/jau1jz/cornus"
+	"github.com/qiafan666/quickweb"
 	"gorm.io/gorm"
 	"sync"
 )
