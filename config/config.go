@@ -62,11 +62,16 @@ type RedisConfig struct {
 	Name     string `yaml:"name"`
 }
 
+type MongonDBConfig struct {
+	Url string `yaml:"url"`
+}
+
 type Config struct {
 	DataBase []DataBaseConfig `yaml:"dataSource"`
 	Redis    []RedisConfig    `yaml:"redis"`
 	Kafka    kafkaConfig      `yaml:"kafka"`
 	Oss      OssConfig        `yaml:"oss"`
+	Mongo    []MongoConfig    `yaml:"mongo"`
 }
 
 type OssConfig struct {
@@ -74,6 +79,10 @@ type OssConfig struct {
 	AccessKeyID     string `yaml:"accessKeyID"`
 	AccessKeySecret string `yaml:"accessKeySecret"`
 	OssEndPoint     string `yaml:"ossEndPoint"`
+}
+
+type MongoConfig struct {
+	Url string `yaml:"url"`
 }
 
 func InitAllConfig(fileName string) Config {
