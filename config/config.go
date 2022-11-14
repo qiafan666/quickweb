@@ -62,10 +62,6 @@ type RedisConfig struct {
 	Name     string `yaml:"name"`
 }
 
-type MongonDBConfig struct {
-	Url string `yaml:"url"`
-}
-
 type Config struct {
 	DataBase []DataBaseConfig `yaml:"dataSource"`
 	Redis    []RedisConfig    `yaml:"redis"`
